@@ -8,6 +8,13 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+@font-face {
+  font-family: 'VAGRoundedStdLight';
+  src: url("https://nucleuscdn.azureedge.net/cdn/fonts/VAGRoundedStd-Light/VAGRoundedStd-Light.eot");
+  src: url("https://nucleuscdn.azureedge.net/cdn/fonts/VAGRoundedStd-Light/VAGRoundedStd-Light.eot?#iefix") format("embedded-opentype"),url("https://nucleuscdn.azureedge.net/cdn/fonts/VAGRoundedStd-Light/VAGRoundedStd-Light.woff") format("woff"),url("https://nucleuscdn.azureedge.net/cdn/fonts/VAGRoundedStd-Light/VAGRoundedStd-Light.ttf") format("truetype"),url("https://nucleuscdn.azureedge.net/cdn/fonts/VAGRoundedStd-Light/VAGRoundedStd-Light.svg#VAGRoundedStdLight") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
 article,
 aside,
 details,
@@ -199,7 +206,7 @@ html {
   box-sizing: inherit;
 }
 body {
-  color: hsla(0, 0%, 0%, 0.8);
+  /* color: hsla(0, 0%, 0%, 0.8);
   font-family: georgia, serif;
   font-weight: normal;
   word-wrap: break-word;
@@ -207,7 +214,19 @@ body {
   -moz-font-feature-settings: "kern", "liga", "clig", "calt";
   -ms-font-feature-settings: "kern", "liga", "clig", "calt";
   -webkit-font-feature-settings: "kern", "liga", "clig", "calt";
-  font-feature-settings: "kern", "liga", "clig", "calt";
+  font-feature-settings: "kern", "liga", "clig", "calt"; */
+  color: #836e5d;
+  font-size: 1em;
+  line-height: 1.58824em;
+  padding-top: 0em;
+  padding-bottom: 1.05882em;
+  font-style: normal;
+  font-family: "VAGRoundedStdLight","Helvetica, Arial, sans-serif";
+  font-weight: 200;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  padding-bottom: 0;
 }
 img {
   max-width: 100%;
@@ -230,8 +249,7 @@ h1 {
   padding-top: 0;
   margin-bottom: 1.45rem;
   color: inherit;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: "VAGRoundedStdLight","Helvetica, Arial, sans-serif";
   font-weight: bold;
   text-rendering: optimizeLegibility;
   font-size: 2.25rem;
@@ -247,8 +265,7 @@ h2 {
   padding-top: 0;
   margin-bottom: 1.45rem;
   color: inherit;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: "VAGRoundedStdLight","Helvetica, Arial, sans-serif";
   font-weight: bold;
   text-rendering: optimizeLegibility;
   font-size: 1.62671rem;
@@ -264,8 +281,7 @@ h3 {
   padding-top: 0;
   margin-bottom: 1.45rem;
   color: inherit;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: "VAGRoundedStdLight","Helvetica, Arial, sans-serif";
   font-weight: bold;
   text-rendering: optimizeLegibility;
   font-size: 1.38316rem;
@@ -281,8 +297,7 @@ h4 {
   padding-top: 0;
   margin-bottom: 1.45rem;
   color: inherit;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: "VAGRoundedStdLight","Helvetica, Arial, sans-serif";
   font-weight: bold;
   text-rendering: optimizeLegibility;
   font-size: 1rem;
@@ -298,8 +313,7 @@ h5 {
   padding-top: 0;
   margin-bottom: 1.45rem;
   color: inherit;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: "VAGRoundedStdLight","Helvetica, Arial, sans-serif";
   font-weight: bold;
   text-rendering: optimizeLegibility;
   font-size: 0.85028rem;
@@ -315,8 +329,7 @@ h6 {
   padding-top: 0;
   margin-bottom: 1.45rem;
   color: inherit;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: "VAGRoundedStdLight","Helvetica, Arial, sans-serif";
   font-weight: bold;
   text-rendering: optimizeLegibility;
   font-size: 0.78405rem;

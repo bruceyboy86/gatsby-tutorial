@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
+    title: `Illuminate`,
+    description: ``,
     author: `@gatsbyjs`,
   },
   plugins: [
@@ -30,7 +30,7 @@ module.exports = {
     {
       resolve: `gatsby-source-drupal`,
       options: {
-        baseUrl: `http://umami.lndo.site/`,
+        baseUrl: `http://illuminate2.nucleusfinancial.loc/`,
       },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality

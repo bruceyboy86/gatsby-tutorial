@@ -12,33 +12,33 @@ exports.createPages = async ({actions, graphql}) => {
   const{createPage} = actions;
   const articles = await graphql(`
     {
-      allNodeArticle {
-      nodes {
-        id
-        title
-        body {
-          processed
-        }
-        field_image {
-          alt
-        }
-        relationships {
-          field_image {
-            localFile {
-              publicURL
+      allNodeIlluminatePost {
+        nodes {
+          id
+          title
+          body {
+            processed
+          }
+          field_featured_image {
+            alt
+          }
+          relationships {
+            field_featured_image {
+              localFile {
+                publicURL
+              }
             }
           }
-        }
-        path {
-          alias
+          path {
+            alias
+          }
         }
       }
-    }
   }
   `);
-  articles.data.allNodeArticle.nodes.map(articleData =>
+  articles.data.allNodeIlluminatePost.nodes.map(articleData =>
     createPage({
-      path: articleData.path.alias,
+      path: articleData.path ? articleData.path.alias : '/404',
       component: path.resolve(`src/templates/article.js`),
       context: {
         ArticleId: articleData.id,
