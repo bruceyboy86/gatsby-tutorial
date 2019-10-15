@@ -67,10 +67,6 @@ strong {
 dfn {
   font-style: italic;
 }
-h1 {
-  font-size: 2em;
-  margin: 0.67em 0;
-}
 mark {
   background-color: #ff0;
   color: #000;
@@ -206,15 +202,6 @@ html {
   box-sizing: inherit;
 }
 body {
-  /* color: hsla(0, 0%, 0%, 0.8);
-  font-family: georgia, serif;
-  font-weight: normal;
-  word-wrap: break-word;
-  font-kerning: normal;
-  -moz-font-feature-settings: "kern", "liga", "clig", "calt";
-  -ms-font-feature-settings: "kern", "liga", "clig", "calt";
-  -webkit-font-feature-settings: "kern", "liga", "clig", "calt";
-  font-feature-settings: "kern", "liga", "clig", "calt"; */
   color: #836e5d;
   font-size: 1em;
   line-height: 1.58824em;
@@ -250,7 +237,7 @@ h1 {
   margin-bottom: 1.45rem;
   color: inherit;
   font-family: "VAGRoundedStdLight","Helvetica, Arial, sans-serif";
-  font-weight: bold;
+  font-weight: 100;
   text-rendering: optimizeLegibility;
   font-size: 2.25rem;
   line-height: 1.1;
@@ -266,7 +253,7 @@ h2 {
   margin-bottom: 1.45rem;
   color: inherit;
   font-family: "VAGRoundedStdLight","Helvetica, Arial, sans-serif";
-  font-weight: bold;
+  font-weight: 100;
   text-rendering: optimizeLegibility;
   font-size: 1.62671rem;
   line-height: 1.1;

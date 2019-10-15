@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import {graphql} from 'gatsby';
+import Img from "gatsby-image";
 
 import Layout from '../components/layout';
 
@@ -11,8 +12,8 @@ const Article = ({data}) => {
     <Layout>
 
       <h1>{post.title}</h1>
-      <img
-        src={post.relationships.field_featured_image.localFile.publicURL}
+      <Img
+        fluid={post.relationships.field_featured_image.localFile.childImageSharp.fluid}
         alt={post.field_featured_image.alt}
       />
       <div dangerouslySetInnerHTML={{ __html: post.body.processed}} />
@@ -38,7 +39,11 @@ export const query = graphql`
       relationships {
         field_featured_image {
           localFile {
-            publicURL
+            childImageSharp{
+              fluid(maxWidth: 800) {
+                ...GatsbyImageSharpFluid
+              }
+            }
           }
         }
       }

@@ -18,9 +18,8 @@ const Articles = ({ data }) => {
           key={article.id}
           title={article.title}
           path={article.path ? article.path.alias : "#"}
-          image={article.relationships.field_featured_image.localFile.publicURL}
+          image={article.relationships.field_featured_image.localFile.childImageSharp.fluid}
           alt={article.field_image ? article.field_image.alt : "default"}
-          // summary={article.body.summary ? article.body.summary : article.body.processed.substring(0, 300)}
           summary={ article.body.summary }
         />
       ))}
@@ -51,7 +50,11 @@ export const data = graphql`
           field_featured_image {
             localFile {
               id
-              publicURL
+              childImageSharp{
+                fluid(maxWidth: 800) {
+                  ...GatsbyImageSharpFluid
+                }
+              }
             }
           }
         }
