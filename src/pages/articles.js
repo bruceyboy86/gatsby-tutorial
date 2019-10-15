@@ -18,9 +18,10 @@ const Articles = ({ data }) => {
           key={article.id}
           title={article.title}
           path={article.path ? article.path.alias : "#"}
-          // image={article.relationships.field_featured_image.localFile.publicURL ? article.relationships.field_featured_image.localFile.publicURL : "http://illuminate2.nucleusfinancial.loc/sites/default/files/default_images/default_image_5.png"}
-          // alt={article.field_image ? article.field_image.alt : "default"}
+          image={article.relationships.field_featured_image.localFile.publicURL}
+          alt={article.field_image ? article.field_image.alt : "default"}
           // summary={article.body.summary ? article.body.summary : article.body.processed.substring(0, 300)}
+          summary={ article.body.summary }
         />
       ))}
 
@@ -34,7 +35,7 @@ const Articles = ({ data }) => {
 
 export const data = graphql`
   {
-    allNodeIlluminatePost(sort: {fields: created, order: DESC}, filter: {field_hr_toggle: {nin: true}}) {
+    allNodeIlluminatePost(sort: {fields: created, order: DESC}, filter: {field_hr_toggle: {nin: true}, relationships: {field_featured_image: {localFile: {size: {gte: 1}}}}, body: {summary: {ne: "", nin: "null"}}}, limit: 10) {
       nodes {
         title
         id
@@ -49,6 +50,7 @@ export const data = graphql`
         relationships {
           field_featured_image {
             localFile {
+              id
               publicURL
             }
           }

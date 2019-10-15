@@ -12,7 +12,7 @@ const Article = ({data}) => {
 
       <h1>{post.title}</h1>
       <img
-        src={post.relationships.field_featured_image.localFile ? post.relationships.field_featured_image.localFile.publicURL : "http://illuminate2.nucleusfinancial.loc/sites/default/files/default_images/default_image_5.png"}
+        src={post.relationships.field_featured_image.localFile.publicURL}
         alt={post.field_featured_image.alt}
       />
       <div dangerouslySetInnerHTML={{ __html: post.body.processed}} />

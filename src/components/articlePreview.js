@@ -2,13 +2,13 @@ import React from "react";
 // import PropTypes from "prop-types";
 import {Link} from "gatsby";
 
-const ArticlePreview = ({title, path, /*image, alt, summary*/}) => (
+const ArticlePreview = ({title, path, image, alt, summary}) => (
   <div>
     <Link to={path}>
       <h2>{title}</h2>
     </Link>
-    {/* <img src={image} alt={alt} />
-    <div dangerouslySetInnerHTML={{__html: summary}} /> */}
+    <img src={image} alt={alt} />
+    <div dangerouslySetInnerHTML={{__html: summary}} />
   </div>
 );
 
