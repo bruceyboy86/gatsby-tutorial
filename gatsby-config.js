@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
     title: `Illuminate`,
-    description: ``,
-    author: `@gatsbyjs`,
+    description: `gatsbyjs illuminate site`,
+    author: `Bruce Davidson`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,

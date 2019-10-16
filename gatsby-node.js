@@ -36,6 +36,31 @@ exports.createPages = async ({actions, graphql}) => {
       }
   }
   `);
+  const webpages = await graphql(`
+  {
+    allNodeDragAndDropPage {
+      nodes {
+        body {
+          processed
+        }
+        title
+        path {
+          alias
+        }
+        id
+      }
+    }
+  }
+  `);
+  webpages.data.allNodeDragAndDropPage.nodes.map(webpageData =>
+    createPage({
+      path: webpageData.path ? webpageData.path.alias : '/404',
+      component: path.resolve(`src/templates/webPage.js`),
+      context: {
+        WebPageId: webpageData.id
+      },
+    })
+  )
   articles.data.allNodeIlluminatePost.nodes.map(articleData =>
     createPage({
       path: articleData.path ? articleData.path.alias : '/404',
