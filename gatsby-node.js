@@ -7,6 +7,7 @@
 // You can delete this file if you're not using it
 
 const path = require('path');
+const {paginate} = require('gatsby-awesome-pagination');
 
 exports.createPages = async ({actions, graphql}) => {
   const{createPage} = actions;
@@ -36,6 +37,15 @@ exports.createPages = async ({actions, graphql}) => {
       }
   }
   `);
+
+  paginate({
+    createPage,
+    items: posts.data.allNodeIlluminatePost.nodes,
+    itemsPerPage: 8,
+    pathPrefix: '/blog',
+    component: path.resolve(`src/templates/blog.js`),
+  });
+
   const webpages = await graphql(`
   {
     allNodeDragAndDropPage {
