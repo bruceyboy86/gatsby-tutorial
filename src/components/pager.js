@@ -5,7 +5,7 @@ const Pager = ({ pageContext }) => {
   const {previousPagePath, nextPagePath, humanPageNumber} = pageContext;
 
   return (
-    <div>
+    <div className="pagination">
       {previousPagePath && (
         <span><Link to={previousPagePath}>Previous</Link>…</span>
       )}

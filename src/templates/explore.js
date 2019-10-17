@@ -12,16 +12,18 @@ const Explore = ({data, pageContext}) => {
     <Layout>
       <SEO title="blog posts" />
       <h1>Blog Posts</h1>
-      {posts.map(post => (
-        <PostPreview
-          key={post.id}
-          title={post.title}
-          path={post.path ? post.path.alias : "#"}
-          image={post.relationships.field_featured_image.localFile.childImageSharp.fluid}
-          alt={post.field_image ? post.field_image.alt : "default"}
-          summary={ post.body.summary }
-        />
-      ))}
+      <div className="gridContainer">
+        {posts.map(post => (
+          <PostPreview
+            key={post.id}
+            title={post.title}
+            path={post.path ? post.path.alias : "#"}
+            image={post.relationships.field_featured_image.localFile.childImageSharp.fluid}
+            alt={post.field_image ? post.field_image.alt : "default"}
+            summary={ post.body.summary }
+          />
+        ))}
+      </div>
       <Pager pageContext={pageContext} />
     </Layout>
   )

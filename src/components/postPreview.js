@@ -3,11 +3,11 @@ import {Link} from "gatsby";
 import Img from "gatsby-image"
 
 const PostPreview = ({title, path, image, alt, summary}) => (
-  <div>
-    <Link to={path}>
-      <h2>{title}</h2>
-    </Link>
+  <div className="illuminatePost">
     <Img fluid={image} alt={alt} />
+    <Link to={path}>
+      <h4>{title}</h4>
+    </Link>
     <div dangerouslySetInnerHTML={{__html: summary}} />
   </div>
 );

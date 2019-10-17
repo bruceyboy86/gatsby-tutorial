@@ -41,7 +41,7 @@ exports.createPages = async ({actions, graphql}) => {
   paginate({
     createPage,
     items: posts.data.allNodeIlluminatePost.nodes,
-    itemsPerPage: 8,
+    itemsPerPage: 12,
     pathPrefix: '/explore',
     component: path.resolve(`src/templates/explore.js`),
   });
