@@ -64,7 +64,7 @@ exports.createPages = async ({actions, graphql}) => {
   posts.data.allNodeIlluminatePost.nodes.map(postData =>
     createPage({
       path: postData.path ? postData.path.alias : '/404',
-      component: path.resolve(`src/templates/post.js`),
+      component: path.resolve(`src/templates/explore.js`),
       context: {
         PostId: postData.id,
       },

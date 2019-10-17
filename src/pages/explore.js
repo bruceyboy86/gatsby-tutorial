@@ -5,7 +5,7 @@ import Layout from "../components/layout";
 import SEO from "../components/seo";
 import PostPreview from "../components/postPreview";
 
-const Posts = ({ data }) => {
+const Explore = ({ data }) => {
   const posts = data.allNodeIlluminatePost.nodes;
 
   return (
@@ -61,4 +61,4 @@ export const data = graphql`
   }
 `;
 
-export default Posts;
+export default Explore;

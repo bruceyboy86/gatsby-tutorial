@@ -36,7 +36,7 @@ const Layout = ({ children }) => {
         }}
       >
         <main>{children}</main>
-        <Link to="posts" >posts </Link>
+        <Link to="explore" >Explore</Link>
         <footer>
           ©  Nucleus Financial Group plc {new Date().getFullYear()}
         </footer>
