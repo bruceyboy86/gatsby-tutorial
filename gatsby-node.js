@@ -42,8 +42,8 @@ exports.createPages = async ({actions, graphql}) => {
     createPage,
     items: posts.data.allNodeIlluminatePost.nodes,
     itemsPerPage: 8,
-    pathPrefix: '/blog',
-    component: path.resolve(`src/templates/blog.js`),
+    pathPrefix: '/explore',
+    component: path.resolve(`src/templates/explore.js`),
   });
 
   const webpages = await graphql(`

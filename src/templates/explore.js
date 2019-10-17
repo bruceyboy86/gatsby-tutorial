@@ -6,7 +6,7 @@ import SEO from "../components/seo"
 import PostPreview from "../components/postPreview"
 import Pager from "../components/pager";
 
-const Blog = ({data, pageContext}) => {
+const Explore = ({data, pageContext}) => {
   const posts = data.allNodeIlluminatePost.nodes;
   return(
     <Layout>
@@ -66,4 +66,4 @@ query($skip: Int!, $limit: Int!){
 }
 `;
 
-export default Blog;
+export default Explore;
