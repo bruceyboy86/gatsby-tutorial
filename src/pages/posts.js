@@ -1,36 +1,31 @@
 import React from "react";
-// import PropTypes from "prop-types";
 import {graphql} from "gatsby";
 
 import Layout from "../components/layout";
 import SEO from "../components/seo";
-import ArticlePreview from "../components/articlePreview";
+import PostPreview from "../components/postPreview";
 
-const Articles = ({ data }) => {
-  const articles = data.allNodeIlluminatePost.nodes;
+const Posts = ({ data }) => {
+  const posts = data.allNodeIlluminatePost.nodes;
 
   return (
     <Layout>
-      <SEO title="articles" />
-      <h1>Articles</h1>
-      {articles.map(article => (
-        <ArticlePreview
-          key={article.id}
-          title={article.title}
-          path={article.path ? article.path.alias : "#"}
-          image={article.relationships.field_featured_image.localFile.childImageSharp.fluid}
-          alt={article.field_image ? article.field_image.alt : "default"}
-          summary={ article.body.summary }
+      <SEO title="posts" />
+      <h1>Posts</h1>
+      {posts.map(post => (
+        <PostPreview
+          key={post.id}
+          title={post.title}
+          path={post.path ? post.path.alias : "#"}
+          image={post.relationships.field_featured_image.localFile.childImageSharp.fluid}
+          alt={post.field_image ? post.field_image.alt : "default"}
+          summary={ post.body.summary }
         />
       ))}
 
     </Layout>
   )
 }
-
-// Articles.PropTypes = {
-//   data: PropTypes.object.isRequired,
-// };
 
 export const data = graphql`
   {
@@ -66,4 +61,4 @@ export const data = graphql`
   }
 `;
 
-export default Articles;
+export default Posts;

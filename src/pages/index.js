@@ -11,7 +11,7 @@ const IndexPage = () => (
     <h1>Hi Bruce</h1>
     <p>Welcome to your Gatsby site.</p>
     <p>It's starting to kick ass!</p>
-    <Link to="articles" >View articles </Link>
+    <Link to="posts" >View posts </Link>
     <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
       <Image />
     </div>

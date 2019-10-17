@@ -10,7 +10,7 @@ const path = require('path');
 
 exports.createPages = async ({actions, graphql}) => {
   const{createPage} = actions;
-  const articles = await graphql(`
+  const posts = await graphql(`
     {
       allNodeIlluminatePost {
         nodes {
@@ -61,12 +61,12 @@ exports.createPages = async ({actions, graphql}) => {
       },
     })
   )
-  articles.data.allNodeIlluminatePost.nodes.map(articleData =>
+  posts.data.allNodeIlluminatePost.nodes.map(postData =>
     createPage({
-      path: articleData.path ? articleData.path.alias : '/404',
-      component: path.resolve(`src/templates/article.js`),
+      path: postData.path ? postData.path.alias : '/404',
+      component: path.resolve(`src/templates/post.js`),
       context: {
-        ArticleId: articleData.id,
+        PostId: postData.id,
       },
     })
   );
