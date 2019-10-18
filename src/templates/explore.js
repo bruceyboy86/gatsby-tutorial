@@ -28,7 +28,6 @@ const Explore = ({data, pageContext}) => {
         ))}
       </div>
       <Pager pageContext={pageContext} hasNextPage={pageInfo.hasNextPage} hasPreviousPage={pageInfo.hasPreviousPage} pageCount={pageInfo.pageCount}/>
-      <Link to="explore" >Explore</Link>
     </Layout>
   )
 };
