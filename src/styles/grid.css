@@ -50,7 +50,7 @@ nav a {
   padding: 1em;
   color: #777;
 }
-nav ul {
+ul {
   display: flex;
 }
 main{

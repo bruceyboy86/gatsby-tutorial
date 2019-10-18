@@ -9,10 +9,12 @@ import "../styles/grid.css"
 
 const Explore = ({data, pageContext}) => {
   const posts = data.allNodeIlluminatePost.nodes;
+  const pageInfo = data.allNodeIlluminatePost.pageInfo;
   return(
     <Layout pageType="exploreContainer">
       <SEO title="blog posts" />
-      <h1>Blog Posts</h1>
+      <h1 id="postCount">{data.allNodeIlluminatePost.totalCount} articles to get you thinking</h1>
+      <p>find just what you're after</p>
       <div className="gridContainer">
         {posts.map(post => (
           <PostPreview
@@ -25,7 +27,7 @@ const Explore = ({data, pageContext}) => {
           />
         ))}
       </div>
-      <Pager pageContext={pageContext} />
+      <Pager pageContext={pageContext} hasNextPage={pageInfo.hasNextPage} hasPreviousPage={pageInfo.hasPreviousPage} pageCount={pageInfo.pageCount}/>
       <Link to="explore" >Explore</Link>
     </Layout>
   )
@@ -39,6 +41,11 @@ query($skip: Int!, $limit: Int!){
     skip: $skip
     limit: $limit
   ) {
+    pageInfo {
+      hasNextPage
+      hasPreviousPage
+      pageCount
+    }
     nodes {
       title
       id
@@ -66,6 +73,7 @@ query($skip: Int!, $limit: Int!){
         alias
       }
     }
+  totalCount
   }
 }
 `;
