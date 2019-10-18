@@ -1,15 +1,16 @@
 import React from "react";
-import { graphql } from "gatsby";
+import { graphql, Link } from "gatsby";
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import PostPreview from "../components/postPreview"
 import Pager from "../components/pager";
+import "../styles/grid.css"
 
 const Explore = ({data, pageContext}) => {
   const posts = data.allNodeIlluminatePost.nodes;
   return(
-    <Layout>
+    <Layout pageType="exploreContainer">
       <SEO title="blog posts" />
       <h1>Blog Posts</h1>
       <div className="gridContainer">
@@ -25,6 +26,7 @@ const Explore = ({data, pageContext}) => {
         ))}
       </div>
       <Pager pageContext={pageContext} />
+      <Link to="explore" >Explore</Link>
     </Layout>
   )
 };

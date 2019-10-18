@@ -3,24 +3,41 @@ import PropTypes from "prop-types"
 import React from "react"
 import Logo from "./logo"
 
-
 const Header = ({ siteTitle }) => (
-  <header
-    style={{
-      background: `#F5F3F2`,
-      marginBottom: `1.45rem`,
-    }}
-  >
-    <div
-      style={{
-        margin: `0 auto`,
-        maxWidth: 960,
-        padding: `1.45rem 1.0875rem`,
-      }}
-    >
+  <header>
+    <div className="headerWrapper">
       <Link to="/">
-        <Logo/>
+        <Logo />
       </Link>
+      <nav>
+        <ul>
+          <li>
+            <Link to="/explore">
+              Explore
+            </Link>
+          </li>
+          <li>
+            <Link to="/illuminate-live-holding">
+              Live
+            </Link>
+          </li>
+          <li>
+            <Link to="/illuminate-learn">
+              Learn
+            </Link>
+          </li>
+          <li >
+            <Link to="/technical-studio">
+              Technical
+            </Link>
+          </li>
+          <li >
+            <Link>
+              <span>Search</span>
+            </Link>
+          </li>
+        </ul>
+      </nav>
     </div>
   </header>
 )
