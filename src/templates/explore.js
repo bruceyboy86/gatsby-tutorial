@@ -1,5 +1,5 @@
 import React from "react";
-import { graphql, Link } from "gatsby";
+import { graphql } from "gatsby";
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
@@ -13,8 +13,10 @@ const Explore = ({data, pageContext}) => {
   return(
     <Layout pageType="exploreContainer">
       <SEO title="blog posts" />
-      <h1 id="postCount">{data.allNodeIlluminatePost.totalCount} articles to get you thinking</h1>
-      <p>find just what you're after</p>
+      <div className="exploreHeader">
+        <h3 id="postCount">{data.allNodeIlluminatePost.totalCount} articles to get you thinking</h3>
+        <p>find just what you're after</p>
+      </div>
       <div className="gridContainer">
         {posts.map(post => (
           <PostPreview

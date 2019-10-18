@@ -1,3 +1,10 @@
+.exploreHeader {
+  text-align: center;
+  margin: 2em;
+}
+#postCount{
+  font-weight: 100;
+}
 .exploreContainer{
   background-color: #F5F3F2
 }

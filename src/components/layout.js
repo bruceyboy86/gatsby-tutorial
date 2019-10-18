@@ -11,6 +11,7 @@ import { useStaticQuery, graphql } from "gatsby"
 
 import Header from "./header"
 import "./layout.css"
+import Footer from "./footer"
 
 const Layout = ({ children, pageType }) => {
   const data = useStaticQuery(graphql`
@@ -28,15 +29,7 @@ const Layout = ({ children, pageType }) => {
       <Header siteTitle={data.site.siteMetadata.title} />
       <div className={pageType}>
         <main>{children}</main>
-        <footer>
-          <div className="footerWrapper">
-            <p>
-              © Nucleus Financial Group plc {new Date().getFullYear()}<br/>
-              Nucleus Financial Group plc is authorised and regulated by the Financial Conduct Authority, is registered in England with company number 05629686 and has its registered office at Elder House, St Georges Business Park, Brooklands Road, Weybridge, Surrey, KT13 0TS.<br/>
-              Please note that telephone calls may be recorded in order to monitor the quality of customer service and for training purposes.
-            </p>
-          </div>
-        </footer>
+        <Footer/>
       </div>
     </>
   )
