@@ -10,7 +10,7 @@
 }
 .gridContainer{
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: repeat(auto-fill, minmax(12em, 1fr));
   grid-column-gap: 2%;
   grid-row-gap: 2em;
   justify-items: stretch;
@@ -37,14 +37,14 @@
   display: flex;
 }
 .pagination .currentPage span{
-  padding: 0.7em 1.1em;
+  padding: 0.7em calc(1vw + 0.4em);
   margin: 0;
   background: #f78f21;
   border: 1px solid #F5F3F2;
   color:#fff;
 }
 .pagination li a{
-  padding: 0.7em 1.1em;
+  padding: 0.7em calc(1vw + 0.4em);
   margin: 0;
   background: #fff;
   border: 1px solid #F5F3F2;
@@ -64,8 +64,37 @@ header{
   max-width: 66em;
   padding: 1.7em 1em 0.2em;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(auto-fit, minmax(19em, 1fr));
   grid-column-gap: 2%;
+}
+#pageNav {
+  width: 100%;
+  background: #fff;
+}
+#pageNav label, #hamburger {
+  display: none;
+}
+@media screen and (max-width: 48em){
+  /* Show Hamburger */
+  #pageNav label {
+    display: inline-block;
+  }
+
+  /* Break down menu items into vertical */
+  #pageNav ul li {
+    display: block;
+    border-bottom: 1px solid #F5F3F2;
+    width: 100%;
+    text-align: center;
+  }
+
+  /* Toggle show/hide menu on checkbox click */
+  #pageNav ul {
+    display: none;
+  }
+  #pageNav input:checked ~ ul {
+    display: block;
+  }
 }
 nav{
   display: grid;
@@ -78,7 +107,7 @@ nav a {
   padding: 1em;
   color: #777;
 }
-ul {
+nav ul {
   display: flex;
 }
 main{
@@ -91,28 +120,45 @@ footer{
   border-top: 4px #f78f21 solid;
   background-color: #F5F3F2
 }
-.footerWrapper{
-  margin: 0 auto;
-  max-width: 66em;
+.footerWrapper {
+  display: grid;
+  grid-template-areas: "nucleuslogo nucleuslogo illuminatelogo" "address address illuminateblurb" "legalblurb legalblurb legalblurb";
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 4fr 3fr;
   padding: 1em;
+  max-width: 66em;
+  margin: 0 auto;
+}
+@media (max-width: 30em) {
+  .footerWrapper {
+    grid-template-columns: 1fr;
+    grid-template-areas: "illuminatelogo" "illuminateblurb" "nucleuslogo" "address" "legalblurb";
+    grid-template-rows: auto;
+  }
+}
+#nucleuslogo{
+  grid-area: nucleuslogo;
+}
+#illuminateblurb{
+  grid-area: illuminateblurb;
+}
+#illuminatelogo{
+  grid-area: illuminatelogo;
+}
+#address{
+  grid-area: address;
+}
+#legalblurb{
+  grid-area: legalblurb;
 }
 footer p{
   font-size: 75%;
 }
 @media (min-width: 30em) {
-  .gridContainer{
-    grid-template-columns: 1fr 1fr;
-  }
 }
 
 @media (min-width: 36em) {
-  .gridContainer{
-    grid-template-columns: 1fr 1fr 1fr;
-  }
 }
 
 @media (min-width: 48em) {
-  .gridContainer{
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-  }
 }

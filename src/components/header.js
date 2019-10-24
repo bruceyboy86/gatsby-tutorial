@@ -9,7 +9,9 @@ const Header = ({ siteTitle }) => (
       <Link to="/">
         <Logo />
       </Link>
-      <nav>
+      <nav id="pageNav">
+        <label for="hamburger">&#9776;</label>
+        <input type="checkbox" id="hamburger"/>
         <ul>
           <li>
             <Link to="/explore">
