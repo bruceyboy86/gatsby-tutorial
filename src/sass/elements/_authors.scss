@@ -1,0 +1,57 @@
+.page-node-type-author{
+  background: $nuc_light;
+  #page-title-full-width-container{
+    display: none;
+  }
+
+  .auth-info{
+    box-shadow: 0 5px 10px rgba($nuc_grey,.25) inset;
+    background: #fff;
+    padding: 3em 0 2em 0;
+    margin: -1em 0 1em;
+    h2{
+      color: $nuc_grey;
+      @media(min-width: 991px){
+        margin-bottom: 1em;
+        padding-top: 0.8em;
+      }
+      @media(max-width: 1200px){
+        padding-top: 0;
+      }
+    }
+    img{
+      border-radius: 100%;
+      @media(max-width: 991px){
+        max-width: 75px;
+
+      }
+    }
+
+    // social links
+    .linkage{
+      p{
+        margin-bottom: .5em;
+        &:before{
+          content: '\f073';
+          display: inline-block;
+          font: normal normal normal 14px/1 FontAwesome;
+          font-size: inherit;
+          text-rendering: auto;
+          -webkit-font-smoothing: antialiased;
+          -moz-osx-font-smoothing: grayscale;
+          padding-right: .5em;
+        }
+        &.company_title:before{ content: '\f0c1' }
+        &.twitter_link:before{ content: '\f099' }
+        &.linkedin_link:before{ content: '\f0e1' }
+        a{
+          color: inherit;
+          &:hover{
+            color: $nuc_orange;
+          }
+        }
+      }
+    }
+
+  }
+}

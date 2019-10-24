@@ -1,0 +1,43 @@
+/*
+Error: Invalid CSS after ".../font-awesome";": expected file to import (string or url()), was ""
+        on line 46 of src/sass/screen.scss
+
+41: //global
+42: @import
+43:     "global/base",
+44:     // "global/modals",
+45:     // "font-awesome/font-awesome";
+
+Backtrace:
+src/sass/screen.scss:46
+/usr/local/lib/ruby/gems/2.5.0/gems/sass-3.4.25/lib/sass/scss/parser.rb:1207:in `expected'
+/usr/local/lib/ruby/gems/2.5.0/gems/sass-3.4.25/lib/sass/scss/parser.rb:1137:in `expected'
+/usr/local/lib/ruby/gems/2.5.0/gems/sass-3.4.25/lib/sass/scss/parser.rb:1117:in `expr!'
+/usr/local/lib/ruby/gems/2.5.0/gems/sass-3.4.25/lib/sass/scss/parser.rb:371:in `block in import_directive'
+/usr/local/lib/ruby/gems/2.5.0/gems/sass-3.4.25/lib/sass/scss/parser.rb:370:in `loop'
+/usr/local/lib/ruby/gems/2.5.0/gems/sass-3.4.25/lib/sass/scss/parser.rb:370:in `import_directive'
+/usr/local/lib/ruby/gems/2.5.0/gems/sass-3.4.25/lib/sass/scss/parser.rb:222:in `special_directive'
+/usr/local/lib/ruby/gems/2.5.0/gems/sass-3.4.25/lib/sass/scss/parser.rb:197:in `directive'
+/usr/local/lib/ruby/gems/2.5.0/gems/sass-3.4.25/lib/sass/scss/parser.rb:684:in `block_child'
+/usr/local/lib/ruby/gems/2.5.0/gems/sass-3.4.25/lib/sass/scss/parser.rb:677:in `block_contents'
+/usr/local/lib/ruby/gems/2.5.0/gems/sass-3.4.25/lib/sass/scss/parser.rb:125:in `stylesheet'
+/usr/local/lib/ruby/gems/2.5.0/gems/sass-3.4.25/lib/sass/scss/parser.rb:41:in `parse'
+/usr/local/lib/ruby/gems/2.5.0/gems/sass-3.4.25/lib/sass/engine.rb:409:in `_to_tree'
+/usr/local/lib/ruby/gems/2.5.0/gems/sass-3.4.25/lib/sass/engine.rb:384:in `_render_with_sourcemap'
+/usr/local/lib/ruby/gems/2.5.0/gems/sass-3.4.25/lib/sass/engine.rb:301:in `render_with_sourcemap'
+/usr/local/lib/ruby/gems/2.5.0/gems/sass-3.4.25/lib/sass/plugin/compiler.rb:492:in `update_stylesheet'
+/usr/local/lib/ruby/gems/2.5.0/gems/sass-3.4.25/lib/sass/plugin/compiler.rb:215:in `block in update_stylesheets'
+/usr/local/lib/ruby/gems/2.5.0/gems/sass-3.4.25/lib/sass/plugin/compiler.rb:209:in `each'
+/usr/local/lib/ruby/gems/2.5.0/gems/sass-3.4.25/lib/sass/plugin/compiler.rb:209:in `update_stylesheets'
+/usr/local/lib/ruby/gems/2.5.0/gems/sass-3.4.25/lib/sass/plugin/compiler.rb:473:in `on_file_changed'
+/usr/local/lib/ruby/gems/2.5.0/gems/sass-3.4.25/lib/sass/plugin/compiler.rb:331:in `block in watch'
+/usr/local/lib/ruby/gems/2.5.0/gems/sass-3.4.25/vendor/listen/lib/listen/listener.rb:252:in `on_change'
+/usr/local/lib/ruby/gems/2.5.0/gems/sass-3.4.25/vendor/listen/lib/listen/listener.rb:290:in `block in initialize_adapter'
+/usr/local/lib/ruby/gems/2.5.0/gems/sass-3.4.25/vendor/listen/lib/listen/adapter.rb:254:in `report_changes'
+/usr/local/lib/ruby/gems/2.5.0/gems/sass-3.4.25/vendor/listen/lib/listen/adapter.rb:323:in `poll_changed_directories'
+/usr/local/lib/ruby/gems/2.5.0/gems/sass-3.4.25/vendor/listen/lib/listen/adapter.rb:299:in `block in start_poller'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Error: Invalid CSS after \".../font-awesome\";\": expected file to import (string or url()), was \"\"\A         on line 46 of src/sass/screen.scss\A \A 41: //global\A 42: @import\A 43:     \"global/base\",\A 44:     // \"global/modals\",\A 45:     // \"font-awesome/font-awesome\";"; }

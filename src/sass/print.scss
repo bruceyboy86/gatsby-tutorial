@@ -1,0 +1,118 @@
+/* Welcome to Compass. Use this file to define print styles.
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/print.css" media="print" rel="stylesheet" type="text/css" /> */
+
+// Global Nuc styles
+body {
+    font-size: 70%;
+}
+
+@page {
+    margin-top: 2cm;
+}
+
+iframe {
+    display: none;
+    width: 0 !important;
+    height: 0 !important;
+    overflow: hidden !important;
+    line-height: 0pt !important;
+    white-space: nowrap;
+}
+
+ul,p {
+    page-break-inside: avoid;
+}
+
+.nuc-footer {
+    page-break-inside: avoid;
+    div[data-az-id="gb2808yhwe"], div[data-az-id="gboejkcz8l"] {
+        display: none;
+    }
+    div[data-az-id="gbo63dlkwp"]{
+        width: 25%;
+    }    
+    div[data-az-id="gbk3ybagng"] {
+        width:75%;
+    }
+    div[data-az-id="gbi72szd07"]{
+        display: flex;
+    }
+    div[data-az-id="gb3aka8vhj"]{
+        margin-bottom: 1em;
+    }
+}
+
+a {
+    page-break-inside:avoid;
+}
+
+a[href^=http]:after {
+    content:" <" attr(href) "> ";
+    color: grey !important;
+    // content: "";
+}
+
+a[href^="#"]:after, a[href^="/"]:after, a[href^="mailto:?"]:after {
+    content: "";
+}
+
+a:not(:local-link):after {
+    content:" [ " attr(href) " ] ";
+}
+
+// =x=x=x=x=x=x=x=x
+
+// Illuminate specific 
+
+@page :first {
+    margin-top: 1.2cm;
+}
+
+    .newsletter-box, 
+    .content-bottom-container, 
+    #block-views-block-illuminate-lists-block-1,
+    #block-views-block-illuminate-lists-block-2,
+    .toggle-comments,
+    div[data-az-id="gb5l5ypxo0"],
+    div[data-az-id="gb055bvd4c"],
+    div[data-az-id="gbmodcnlhk"] > h2,
+    #block-adpromoblock,
+    .post-comments,
+    article>.col-sm-12,
+    .illy-hero.img-responsive
+    {
+        display: none;
+    }
+
+    .page-title:before {
+        content: url("https://illuminate.nucleusfinancial.com/themes/custom/nucleusfinancial/illuminatelogo.png");
+        width: 182px;
+        height: 58px;
+    }
+
+    .page-title {
+        margin-bottom: 8px !important;
+    }
+
+    .read_time {
+        background: #FFF !important;
+    }
+
+    .region-sidebar-second {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 2em;
+    }
+
+    .post-body {
+        margin-bottom: 0px;
+    }
+
+    #block-views-block-author-info-block-1 {
+        margin-top: 2em;
+    }
+
+    div[data-az-id="gbmdsm5xk1"]{
+        margin-top: 20px !important;
+    }

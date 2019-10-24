@@ -1,0 +1,46 @@
+div#postVideo {
+  position: absolute;
+  width: 100%;
+  .row {
+    position: relative;
+    height: 0;
+    padding-bottom: 58%;
+    #postVideoIframeButton {
+      text-align: center;
+      #play {
+        display: none;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        width: 68px;
+        height: 48px;
+        margin-left: -34px;
+        margin-top: -24px;
+        i {
+          color: #fff;
+          text-shadow: #00000036 0px 0px 6px;
+          font-size: 4em;
+          height: 100%;
+          left: 0;
+          position: absolute;
+          top: 0;
+          width: 100%;
+          cursor: pointer;
+          &:hover {
+            color: #f00
+          }
+        }
+      }
+    }
+    iframe {
+      display: none;
+      width: 100%;
+      border: 0;
+      height: 100%;
+      left: 0;
+      position: absolute;
+      top: 0;
+      width: 100%;
+    }
+  }
+}

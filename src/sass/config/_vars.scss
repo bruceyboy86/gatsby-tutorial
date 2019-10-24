@@ -1,0 +1,49 @@
+$nuc_grey: #836e5d;
+$nuc_slate: #9b907b;
+$nuc_light: #F5F3F2;
+$nuc_input: #F4F2F1;
+$nuc_orange: #f78f21;
+$error: #b93644;
+
+$nuc_lime: #c4d200;
+$nuc_secondary_pink: #e3397f;
+$nuc_secondary_purple: #b081b9;
+$nuc_secondary_green: #c3d200;
+$nuc_secondary_turquoise: #0098a9;
+$nuc_secondary_blue: #8fa6c8;
+$nuc_secondary_yellow: #ffd231;
+$nuc_slate: #9a907b;
+$nuc_dark_pink: #ba3f71;
+$nuc_dark_purple: #897491;
+$nuc_dark_green: #b3b52a;
+$nuc_dark_turquoise: #007289;
+$nuc_dark_blue: #6b81a7;
+$nuc_dark_yellow: #eab200;
+
+$trans_speed: .5s;
+
+$bp_large: 1400px;
+$bp_inner: 1280px;
+$bp_960: 960px;
+$bp_800: 800px;
+$bp_660: 660px;
+$bp_639: 639px;
+
+// font size map
+$fs_map:(
+  base : ( fontsize: 17, leading: 27, before: 0, after: 18 ),
+  intro: ( fontsize: 24, leading: 32, before: 0, after: 20 ),
+  fs_1 : ( fontsize: 38, leading: 45, before: 10, after: 20 ),
+  fs_2 : ( fontsize: 30, leading: 36, before: 24, after: 20 ),
+  fs_3 : ( fontsize: 22, leading: 30, before: 24, after: 20 ),
+  fs_4 : ( fontsize: 20, leading: 24, before: 24, after: 10 ),
+  fs_5 : ( fontsize: 20, leading: 24, before: 10, after: 20 ),
+  fs_6 : ( fontsize: 15, leading: 28, before: 0, after: 0 ),
+);
+
+$fs: map-get(map-get($fs_map, base), fontsize);
+$fsIntro: map-get(map-get($fs_map, intro), fontsize);
+
+$vag_light: 'VAGRoundedStdLight';
+$font-stack: "Helvetica, Arial, sans-serif";
+$light: $vag_light, $font-stack;

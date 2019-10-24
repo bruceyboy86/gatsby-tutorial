@@ -1,0 +1,465 @@
+@media(max-width: 1200px){
+  .topline_container{
+    position: absolute;
+    right: 4em;
+    top: 0;
+  }
+  .container.navbar-container{
+    background: transparent;
+  }
+  div.navbar-header{
+    width: 100%
+  }
+  a.logo img {
+    // position: relative;
+    // top: 3.5em;
+  }
+}
+
+@media(max-width: 769px){
+  .topline_container{
+    right: 5em;
+  }
+  a.logo img {
+    position: relative;
+    top: initial;
+  }
+}
+
+@media(max-width: 760px){
+  .logo-nav-container{
+    width: 100%;
+    position: absolute;
+    margin: auto;
+    left: 0;
+    right: 0;
+    div.navbar-collapse {
+      position: relative;
+      background: #fff;
+      ul.menu--main {
+        float: initial;
+        text-align: center;
+      }
+    }
+  }
+}
+
+// @media(max-width: 500px){
+//   header#navbar{
+//     height: 6em;
+//     a.logo img {
+//       position: absolute;
+//       top: 3em;
+//       margin: 0 auto;
+//       left: 0;
+//       right: 0;
+//     }
+//     .topline_container{
+//       margin: 0 auto;
+//       left: 0;
+//       right: 2em;
+//       width: 11em;
+//     }
+//     div.logo-nav-container{
+//       div.navbar-collapse{
+//         top:3em;
+//       }
+//       div.navbar-header button.navbar-toggle {
+//         position: absolute;
+//         margin: 0 auto;
+//         left: 11em;
+//         right: 0;
+//       }
+//     }
+//   }
+// }
+
+@media(min-width: 1200px){
+  .container.navbar-container{
+    .container-col{
+      padding-top: 1em;
+    }
+  }
+  .topline_container{
+  height:3.5em;
+    .region-topline{
+      float: right;
+    }
+    .menu.menu--topline.nav{
+      margin-top: 0;
+    }
+  }
+}
+
+.container.navbar-container{
+  background: transparent;
+}
+
+.topline_container{
+  z-index: 1;
+  .region{
+    nav#block-topline{
+      display:inline-block;
+    }
+  }
+}
+#block-topline{
+  ul{
+    float: right;
+    @media(min-width: 1200px){
+      margin-right: 15px;
+    }
+    li{
+      display: inline-block;
+      background: $nuc_light;
+      color: $nuc_orange;
+      a{ color: $nuc_orange; }
+      padding: .5em .8em;
+      margin-left: 0.7em;
+      vertical-align: top;
+      width: 10.9em;
+      text-align: center;
+      @include transition(all ease $trans_speed);
+      &:after{
+        content: "\f002";
+        font-family: FontAwesome;
+        padding-left: .5em;
+      }
+      // link to nucleusfinancial.com
+      &:nth-child(1){
+        &:after{
+          content: url(/themes/custom/nucleusfinancial/favicon.png);
+          display: inline-block;
+          vertical-align: sub;
+          position: relative;
+          top: 1px;
+        }
+        &:hover{
+          background: $nuc_grey;
+          a{ color: #fff; }
+        }
+      }
+      // link to platform
+      &:nth-child(2){
+        background: $nuc_grey;
+        color: $nuc_light;
+        a{ color: $nuc_light; }
+
+        &:after{
+          content: "\f023";
+        }
+        &:hover{
+          background: $nuc_light;
+          color: $nuc_orange;
+          a{ color: $nuc_orange; }
+        }
+        a{
+          padding-bottom: 3px;
+        }
+      }
+      &.expanded{
+        .dropdown-menu{
+          border:0;
+          border-radius:0;
+          box-shadow:none;
+          background-clip: unset;
+          background: initial;
+          margin: initial;
+          padding: initial;
+          font-size: inherit;
+
+          li{
+            margin-left:0 ;
+          }
+        }
+      }
+    }
+    a{
+      text-decoration: none;
+      color: inherit;
+      padding: 0;
+      display: inline-block;
+      height: auto;
+      line-height: 1;
+      text-transform: none;
+      font-size: inherit;
+      &:hover{
+        background: transparent;
+      }
+    }
+    @media(max-width: $bp_800){
+      li{
+        position: relative;
+        a{
+          // width: 100%;
+          overflow: hidden;
+          position: absolute;
+          opacity: 0 !important;
+        }
+        &:after{
+          padding: 0;
+        }
+      }
+
+    }
+  }
+}
+
+// header#navbar {
+//
+// }
+
+
+.logo-nav-container{
+  .navbar-collapse{
+    .menu--main{
+      float: right;
+      background: #fff;
+    }
+  }
+}
+
+@media(min-width: 800px){
+  .logo-nav-container{
+    .navbar-header, .navbar-collapse{
+      display:inline-block;
+    }
+  }
+}
+
+/////////////////////////////////////////
+// mobile nav restyle
+div.logo-nav-container {
+  button.navbar-toggle {
+    width: 42px;
+    height: 42px;
+    margin: 0;
+    border: 0;
+    &:hover{
+      background-color: transparent;
+      border: 0;
+    }
+    .icon-bar{
+      background-color: #f78f21;
+      width: 25px;
+      height: 3px;
+      transition: all 0.1s;
+    }
+    &[aria-expanded="true"]{
+      .icon-bar{
+        margin-top:-2px;
+        height: 2px;
+        transition: all 0.1s;
+        &:nth-child(2){
+          transform: rotate(45deg);
+        }
+        &:nth-child(3){
+          display:none;
+        }
+        &:nth-child(4){
+          transform: rotate(-45deg);
+        }
+      }
+    }
+  }
+}
+#navbar{
+  padding-top: 2em;
+}
+.navbar-default .navbar-collapse{
+  border: 0;
+}
+
+.navbar-header {
+  width: auto;
+  position: relative;
+  .navbar-btn{
+    margin: 0;
+  }
+  .navbar-nav {
+    position: absolute;
+    float: right;
+    right: 0;
+    bottom: 0;
+    a {
+      &.is-active {
+        background: transparent;
+        color: $nuc_orange;
+      }
+    }
+  }
+}
+
+@media(max-width: 800px) {
+  #block-topline ul {
+    li {
+    width: 46px;
+    min-width: 41px;
+      }
+  }
+  .region-topline{
+    .form-inline .form-type-textfield{
+      display: none;
+    }
+  }
+}
+
+
+
+
+
+
+.menu-srch{
+  span{
+    display: none;
+  }
+  &:after{
+    content: "\e003";
+    position: relative;
+    top: 1px;
+    display: inline-block;
+    font-family: 'Glyphicons Halflings';
+    font-style: normal;
+    font-weight: normal;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+#bigfatsearch{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 0;
+  overflow: hidden;
+  z-index: 9999;
+  background: #fff;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.5vw;
+  opacity: .25;
+  @include transition(all ease .75s);
+  &.active{
+    height: 100vh;
+    opacity: 1;
+  }
+  .close{
+    position: absolute;
+    right: 2em;
+    top: 2em;
+    font-size: 1.25em;
+  }
+  h2{
+    color: $nuc_grey;
+  }
+  .sub_form{
+    display: flex;
+  }
+  input{
+    border: none;
+    border-bottom: 1px solid $nuc_light;
+    padding: .5em;
+    width: 100%;
+    opacity: .5;
+    display: inline-block;
+    &:focus{
+      opacity: 1
+    }
+  }
+  button{
+    background: transparent;
+    border: none;
+    color: $nuc_orange;
+    display: inline-block;
+  }
+}
+
+
+
+// rework nav
+
+header#navbar{
+  background: #fff;
+  border: 0;
+  margin-bottom: 0;
+  [class*="col-"]{
+    padding: 0
+  }
+  .main_nuc_nav{
+    // background: rgba($nuc_orange, .1);
+    #navbar-collapse{
+      padding: 0;
+      @media(max-width: 769px){
+        padding-left: 15px;
+        padding-right: 15px;
+      }
+    }
+    nav{
+      @media(max-width: 769px){
+        ul{
+          display: flex;
+          margin-top: 0;
+        }
+        li{
+          display: inline-block;
+          width: 100%;
+          text-align: center;
+        }
+      }
+
+      @media(min-width: 768px){
+        text-align: right;
+        .navbar-nav{
+          float: none;
+          margin-top: 1.75em;
+          li{
+            float: none;
+            display: inline-block;
+            .menu-srch{
+              margin-right: -15px;
+            }
+          }
+        }
+      }
+    }
+
+    @media(max-width: 500px){
+      nav{
+        ul{
+          display: block;
+          li{
+            display: block;
+            border-bottom: 1px solid $nuc-light;
+            &.last{
+              border-bottom: none;
+            }
+          }
+        }
+      }
+    }
+
+
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//

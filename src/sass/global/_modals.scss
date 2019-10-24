@@ -1,0 +1,151 @@
+// Basic modals
+
+.modal-dialog{
+  margin: 225px auto;
+  .modal-header{
+    button{
+      position: absolute;
+      right: 15px;
+      top: 15px;
+    }
+  }
+  &.modal-fluid{
+    width: 80vw;
+    max-width: 1280px;
+  }
+  .modal-content{
+    text-align: left;
+  }
+  &.modal-dialog-centered {
+    min-width: 60vw;
+  }
+}
+
+// Cookie modal
+
+#nuc-cookieModal {
+  padding-right: 15px;
+  height: 0;
+  display: block;
+  &.in{
+    height: 100%;
+  }
+
+  .nuc-cookieModalBox {
+    position: relative;
+    z-index: 999;
+    margin: auto;
+    top: 40%;
+    padding: 10px;
+    max-width: 600px;
+    .nuc-arrowBox {
+      padding-left: 20px;
+      position: relative;
+      overflow-x: hidden;
+      overflow-y: hidden;
+      margin: 20px 0 0;
+      .nuc-arrowBoxShape {
+        background-color: $nuc_light;
+        background-size: cover;
+        min-height: 70px;
+        border: 1px solid #0000;
+        position: relative;
+        margin: auto;
+        .nuc-arrowBoxContent {
+          margin: 20px 15px 15px !important;
+          .add-nucarrowGrey {
+            margin-top: 0;
+            padding: 0 !important;
+            .nuc-modalBtn {
+              background-color: $nuc_orange;
+              color: #fff;
+              &.unchecked{
+                background-color: $nuc_grey;
+                color: $nuc_slate;
+                border: 2px solid $nuc_grey;
+              }
+            }
+            .nuc-modalBtnClient {
+              background-color: #0000;
+              color: $nuc_orange;
+            }
+            .nuc-modalBtn,
+            .nuc-modalBtnClient {
+              font-family: $light;
+              font-size: 17px;
+              font-weight: 400;
+              margin: 0 10px 0 0;
+              border: 2px solid $nuc_orange;
+              padding: 10px;
+              i {
+                padding-left: 15px;
+              }
+            }
+          }
+        }
+        .nuc-arrow {
+          border: 20px solid $nuc_light;
+          border-color: rgba(0, 0, 0, 0) $nuc_light;
+          transform: rotate(-90deg);
+          position: absolute;
+          left: -31px;
+          border-bottom: none;
+          top: 25px;
+          &::before,
+          &::after {
+            content: '';
+            position: absolute;
+            width: 5000px;
+            bottom: 0;
+            height: 20px;
+            background: $nuc_light;
+          }
+          &::before {
+            right: 20px;
+          }
+          &::after {
+            left: 20px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.launch-modal{
+  text-decoration: none;
+  color: #fff !important;
+  &:hover,&:active,&:visited,&:focus{
+    text-decoration: none;
+    color: #fff;
+  }
+}
+
+// Video modal
+
+#videoModal{
+  .modal-dialog{
+    @media (min-width: 768px){
+      max-width: 800px;
+        width: 100%;
+    }
+  }
+  .modal-header{
+    border: 0;
+    padding: 0;
+    .close{
+      color: #fff;
+      text-shadow: none;
+    }
+  }
+  .modal-body{
+    padding: 0;
+  }
+  .modal-content{
+    background: rgba(0,0,0,0);
+    box-shadow: none;
+    border: none;
+    padding: 0;
+  }
+
+}

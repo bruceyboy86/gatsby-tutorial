@@ -1,0 +1,19 @@
+table{
+    th, td{
+        padding: 11px 17px;
+	border:none;
+    }
+    th{
+        color: #fff;
+        background-color: $nuc_orange;
+    }
+    td{
+        background-color: #fff;
+        color: $nuc_grey;
+    }
+    tr:nth-child(odd){
+        td{
+            background-color: $nuc_light;
+        }
+    }
+}

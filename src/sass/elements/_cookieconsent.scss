@@ -1,0 +1,19 @@
+div.cc-floating.cc-window, div.cc-banner.cc-window {
+    max-width: 100%;
+    bottom: 0;
+    .cc-message{
+        text-align:center;
+        font-family: $light;
+        font-size: 17px;
+    }
+    .cc-btn {
+        padding: 0.8em 0.5em;
+        &:last-child{
+            min-width: 1.5em;
+        }
+        svg{
+            width:1em;
+            height:1em;
+        }
+    }
+}

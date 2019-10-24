@@ -1,0 +1,201 @@
+// responsive layout on search containers
+@media (max-width: 1200px){
+  body.path-explore,body.path-contributors{
+    div.main-container{
+      width: 100%;
+      .hp-grid .view-content{
+        max-width: 970px;
+        width: 98%;
+        margin: 0 auto
+      }
+      .hp-grid .view-filters{
+        background: #fff;
+        .views-exposed-form{
+          max-width: 970px;
+          margin: 0 auto
+        }
+      }
+    }
+  }
+}
+@media (max-width: 991px){
+  body.path-explore,body.path-contributors{
+    div.main-container{
+      width: 100%;
+      .hp-grid .view-content{
+        max-width: 90%;
+        margin: 0 auto
+      }
+    }
+  }
+}
+
+////////////////////////////////////////////////////////////
+
+body.path-search, body.path-explore, body.path-blog,
+body.path-search-authors {
+  background: $nuc_light;
+  .search-authors-header{
+    margin-bottom: 2.5em;
+    * {
+      color: $nuc_grey;
+      text-align: center;
+    }
+  }
+  .search-searchbar {
+    .search-searchbar-wrapper {
+      background: white;
+      padding: 1em 0;
+    }
+  }
+  .views-field.views-field-title {
+    background: #fff;
+  }
+  .views-field-field-author-tax {
+    margin: 0.5em;
+    .author-image {
+      min-height: 165px;
+      img {
+        border-radius: 50%;
+        margin: 1em auto;
+      }
+    }
+    .author-name {
+      text-align: center;
+    }
+  }
+  .views-field.views-field-title {
+    margin-bottom: 2em;
+    .container-fluid {
+      padding-left: 0;
+      .row {
+        .content {
+          margin-top: 1em;
+        }
+      }
+    }
+  }
+}
+
+
+// reworks
+.path-contributors{
+  background: $nuc_light
+}
+.hp-grid.show-filter, .view-search-authors{
+  .views-exposed-form{
+    padding: 1em .25em;
+    background: #fff;
+    box-shadow:-1170px 0 0 0 #fff, 1170px 0 0 0 #fff;
+    margin-bottom: 2em;
+    .form--inline.form-inline{
+      display: flex;
+      position: relative;
+      @media(max-width: 1200px){
+        display: block;
+      }
+      @media(max-width: 768px){
+        max-width: 80%;
+        margin: 0 auto;
+      }
+    }
+    .form-item{
+      width: 25%;
+      @media(max-width: 1200px){
+        width: 36%;
+        padding-left: 15px;
+        padding-right: 15px;
+        margin: 15px -15px;
+        &:first-child{
+          width: calc(100% - 5px);
+          margin: 0;
+          padding: 0;
+        }
+      }
+      @media(max-width: 768px){
+        width: 100%;
+        padding: 0;
+        margin: .5em auto;
+        display: block;
+        &:first-child{
+          width: 100%;
+        }
+      }
+      .select-wrapper{
+        width: 100%;
+        &:after{
+          color: $nuc_grey ;
+          padding-right: 15px;
+          -webkit-font-smoothing: antialiased;
+          -moz-osx-font-smoothing: grayscale;
+          content: '\e114';
+          display: inline-block;
+          font-family: 'Glyphicons Halflings';
+        }
+        .hrspecific{
+          display: none;
+        }
+      }
+      label{display: none;}
+      input,select{
+        width: 100%;
+        border-radius: 0;
+        max-width: 315px;
+        height: 3em;
+        @media(max-width: 1200px){ max-width: none;}
+      }
+    }
+    .form-actions{
+      // display: none;
+      position: absolute;
+      left: 22%;
+      @media(max-width: 1200px){
+        position: absolute;
+        left: 96%;
+        top: 4px;
+      }
+      @media(max-width: 768px){
+        position: static;
+        background: $nuc-orange;
+        text-align: center;
+      }
+      button{
+        background: transparent;
+        color: $nuc-grey;
+        padding: 8px;
+        @media(max-width: 768px){
+          color: #fff;
+          &:before{
+            content: 'Search';
+            margin-right: .5em;
+          }
+        }
+      }
+    }
+  }
+  .view-header{
+    text-align: center;
+    padding: 2em;
+    h2, p{
+      color: $nuc-grey;
+      // color: rgba($nuc_grey,.8);
+      // text-shadow: 5px 3px 7px $nuc_light, 0 0px 0px rgba(0,0,0,.75), -1px -3px 3px $nuc_light;
+    }
+  }
+
+  .author-image{
+    background: #fff;
+    width: 80%;
+    height: 0;
+    padding-bottom: 80%;
+    border-radius: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+    img{width: 100%;}
+  }
+  .author-name{
+    text-align: center;
+    margin-top: 1em;
+    margin-bottom: 2em;
+  }
+}

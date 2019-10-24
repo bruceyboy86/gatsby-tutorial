@@ -1,0 +1,59 @@
+.region-topline .block-views-exposed-filter-blocksearch-page-1 {
+  display: inline-table;
+  &:hover {
+    outline: none;
+    input.form-text {
+      width: 250px;
+      margin-right: 3px;
+      padding: 0 12px;
+    }
+    div.form--inline {
+      background: $nuc_light;
+    }
+  }
+  input {
+    background: transparent;
+    color: $nuc_grey;
+    &.form-text {
+      transition: width .5s, margin .5s;
+      width: 0;
+      margin-right: -7px;
+      padding: 0;
+      &:focus {
+        width: 250px;
+        margin-right: 3px;
+        padding: 0 12px;
+      }
+    }
+  }
+  input,
+  .button.form-submit {
+    border-radius: 0;
+    height: 3em;
+    border: 0;
+    &:focus {
+      box-shadow: none;
+    }
+  }
+  .form--inline {
+    background: $nuc_light;
+    transition: background 1s;
+    .form-item-sort-by,
+    .form-item-field-category {
+      display: none;
+    }
+  }
+  div.form-actions {
+    float: right;
+    .button.form-submit {
+      width: 3em;
+      background: $nuc_light;
+      color: $nuc_orange;
+      margin-right: 0;
+      span.glyphicon {
+        margin-left: 0;
+        margin-right: 0;
+      }
+    }
+  }
+}

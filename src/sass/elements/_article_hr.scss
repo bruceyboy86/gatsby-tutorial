@@ -1,0 +1,48 @@
+.page-node-type-illuminate-post{
+  .resource_list{
+    margin-top: 2em;
+    .rl_item{
+      border-top: 1px solid $nuc_grey;
+      &:last-child{
+        border-bottom: 1px solid $nuc_grey;
+      }
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: .5em;
+      a{
+        display: block;
+        width: 100%
+      }
+      [class*="ico_"]{
+        // line-height: 3;
+        font-size: 1.25em;
+        color: $nuc_orange;
+        &.ico_pdf:before{
+          content: "\f1c1";
+        }
+        &.ico_doc:before, &.ico_docx:before{
+          content: "\f1c2";
+        }
+      }
+    }
+  }
+
+  .crumbs{
+    margin: -1em auto 2em;
+    font-size: 14px;
+    color: $nuc_orange;
+    a{
+      color: $nuc_grey;
+      &:hover{
+        color: $nuc_orange;
+        text-decoration: none;
+      }
+      &:after{
+        content: ">";
+        margin: 0 .25em;
+      }
+    }
+  }
+
+}

@@ -1,0 +1,45 @@
+body {
+  color: $nuc_grey;
+  @include set_type_styles(base);
+  @include setFont('light');
+  padding-bottom: 0;
+}
+
+body * {
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  .fa,
+  .far,
+  .fas {
+    font-family: FontAwesome;
+    font-weight: normal;
+  }
+  .nucOrange{
+    color: $nuc-orange;
+  }
+}
+
+@include headers;
+a {
+  color: $nuc_orange;
+}
+
+hr {
+  margin-bottom: 30px;
+  margin-top: 0;
+  border: none;
+  margin-left: 0;
+  margin-right: auto;
+  height: 1px;
+  background: $nuc_orange;
+}
+
+.region-content {
+  padding: 15px 0;
+}
+
+div.main-container {
+  padding-left: 0;
+  padding-right: 0;
+}
