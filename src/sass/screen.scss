@@ -5,7 +5,9 @@
     "config/vars";
 
 //elements
-// @import
+@import
+    "elements/pagination",
+    "elements/header";
 //     "elements/footer",
 //     "elements/searchbar",
 //     "elements/nav",
@@ -40,6 +42,6 @@
 
 //global
 @import
-    "global/base",
+    "global/base";
     // "global/modals",
     // "font-awesome/font-awesome";

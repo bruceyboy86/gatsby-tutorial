@@ -26,7 +26,7 @@
   justify-items: stretch;
   align-items: stretch;
 }
-.pagination{
+/* .pagination{
   margin: 1em auto;
   text-align: center;
 }
@@ -49,14 +49,14 @@
   background: #fff;
   border: 1px solid #F5F3F2;
   color: #836e5d;
-}
-a{
+} */
+/* a{
   text-decoration: none;
-}
+} */
 .illuminatePost {
   background: #fff;
 }
-header{
+/* header{
   background: #fff;
 }
 .headerWrapper{
@@ -75,12 +75,10 @@ header{
   display: none;
 }
 @media screen and (max-width: 48em){
-  /* Show Hamburger */
   #pageNav label {
     display: inline-block;
   }
 
-  /* Break down menu items into vertical */
   #pageNav ul li {
     display: block;
     border-bottom: 1px solid #F5F3F2;
@@ -88,7 +86,6 @@ header{
     text-align: center;
   }
 
-  /* Toggle show/hide menu on checkbox click */
   #pageNav ul {
     display: none;
   }
@@ -109,7 +106,7 @@ nav a {
 }
 nav ul {
   display: flex;
-}
+} */
 main{
   padding: 1em;
   margin-right: auto;

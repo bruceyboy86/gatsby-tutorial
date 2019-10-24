@@ -60,7 +60,7 @@
     h#{$i}{
       @include setFont('light');
       color:$nuc_orange;
-      @include set_type_styles(fs_#{$i});
+      // @include set_type_styles(fs_#{$i});
       @if $i==6{ color: $nuc_grey }
       a,a:hover,a:active{
         color: inherit;
