@@ -107,12 +107,12 @@ nav a {
 nav ul {
   display: flex;
 } */
-main{
+/* main{
   padding: 1em;
   margin-right: auto;
   margin-left: auto;
   max-width:66em;
-}
+} */
 footer{
   border-top: 4px #f78f21 solid;
   background-color: #F5F3F2

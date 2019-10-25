@@ -1,51 +1,51 @@
 header{
   background: #fff;
-}
-.headerWrapper{
-  margin: 0 auto;
-  max-width: 66em;
-  padding: 1.7em 1em 0.2em;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(19em, 1fr));
-  grid-column-gap: 2%;
-}
-#pageNav {
-  width: 100%;
-  background: #fff;
-}
-#pageNav label, #hamburger {
-  display: none;
-}
-@media screen and (max-width: 48em){
-  #pageNav label {
-    display: inline-block;
+  .headerWrapper{
+    margin: 0 auto;
+    max-width: 66em;
+    padding: 1.7em 1em 0.2em;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 2%;
+    #pageNav {
+      width: 100%;
+      background: #fff;
+      display: grid;
+      grid-template-columns: 1fr;
+      justify-items: end;
+      align-items: end;
+      font-size: 90%;
+      label, #hamburger {
+        display: none;
+      }
+      a {
+        padding: 1em;
+        color: #777;
+      }
+      ul {
+        display: flex;
+      }
+    }
+    @media screen and (max-width: 49em){
+      #pageNav{
+        align-items: center;
+        label {
+          display: inline-block;
+          font-size: 2em;
+        }
+        ul {
+          display: none;
+          li {
+            display: block;
+            border-bottom: 1px solid #F5F3F2;
+            width: 100%;
+            text-align: center;
+          }
+        }
+        input:checked ~ ul {
+          display: inline-flex;
+        }
+      }
+    }
   }
-
-  #pageNav ul li {
-    display: block;
-    border-bottom: 1px solid #F5F3F2;
-    width: 100%;
-    text-align: center;
-  }
-
-  #pageNav ul {
-    display: none;
-  }
-  #pageNav input:checked ~ ul {
-    display: block;
-  }
-}
-nav#pageNav{
-  display: grid;
-  grid-template-columns: 1fr;
-  justify-items: end;
-  align-items: end;
-  font-size: 90%;
-}
-nav a {
-  padding: 1em;
-  color: #777;
-}
-nav ul {
-  display: flex;
 }
