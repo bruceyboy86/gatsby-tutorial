@@ -38,38 +38,50 @@ header {
     max-width: 66em;
     padding: 1.7em 1em 0.2em;
     display: grid;
+    grid-template-areas: "logo pageNav";
     grid-template-columns: 1fr 1fr;
-    grid-column-gap: 2%; }
+    grid-column-gap: 2%;
+    align-items: center; }
+    header .headerWrapper #logo {
+      grid-area: logo; }
+    header .headerWrapper #hamburgerLabel {
+      grid-area: hamburgerLabel; }
     header .headerWrapper #pageNav {
-      width: 100%;
       background: #fff;
-      display: grid;
-      grid-template-columns: 1fr;
       justify-items: end;
-      align-items: end;
-      font-size: 90%; }
-      header .headerWrapper #pageNav label, header .headerWrapper #pageNav #hamburger {
-        display: none; }
+      font-size: 90%;
+      display: flex;
+      flex-direction: row-reverse;
+      grid-area: pageNav; }
       header .headerWrapper #pageNav a {
-        padding: 1em;
         color: #777; }
       header .headerWrapper #pageNav ul {
         display: flex; }
+        header .headerWrapper #pageNav ul li {
+          padding: 1em;
+          margin-bottom: 0; }
+    header .headerWrapper label, header .headerWrapper #hamburger {
+      display: none; }
     @media screen and (max-width: 49em) {
-      header .headerWrapper #pageNav {
-        align-items: center; }
-        header .headerWrapper #pageNav label {
+      header .headerWrapper {
+        grid-template-areas: "logo hamburgerLabel" "pageNav pageNav"; }
+        header .headerWrapper label {
           display: inline-block;
-          font-size: 2em; }
+          font-size: 2em;
+          flex-direction: row-reverse;
+          display: flex; }
         header .headerWrapper #pageNav ul {
-          display: none; }
+          display: none;
+          margin: 0 auto; }
           header .headerWrapper #pageNav ul li {
             display: block;
-            border-bottom: 1px solid #F5F3F2;
             width: 100%;
             text-align: center; }
-        header .headerWrapper #pageNav input:checked ~ ul {
+        header .headerWrapper input:checked ~ #pageNav ul {
           display: inline-flex; } }
+    @media screen and (max-width: 30em) {
+      header .headerWrapper #pageNav ul {
+        flex-direction: column; } }
 
 footer {
   border-top: 4px #f78f21 solid;

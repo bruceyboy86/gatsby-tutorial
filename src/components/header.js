@@ -6,12 +6,12 @@ import Logo from "./logo"
 const Header = ({ siteTitle }) => (
   <header>
     <div className="headerWrapper">
-      <Link to="/">
+      <Link id="logo" to="/">
         <Logo />
       </Link>
+      <label id="hamburgerLabel" for="hamburger">&#9776;</label>
+      <input type="checkbox" id="hamburger"/>
       <nav id="pageNav">
-        <label for="hamburger">&#9776;</label>
-        <input type="checkbox" id="hamburger"/>
         <ul>
           <li>
             <Link to="/explore">
