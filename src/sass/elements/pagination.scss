@@ -1,24 +1,24 @@
 .pagination{
   margin: 1em auto;
   text-align: center;
-}
-.pagination ul{
-  display: inline-flex;
-}
-.pagination li {
-  display: flex;
-}
-.pagination .currentPage span{
-  padding: 0.7em calc(1vw + 0.4em);
-  margin: 0;
-  background: $nuc_orange;
-  border: 1px solid $nuc_light;
-  color:#fff;
-}
-.pagination li a{
-  padding: 0.7em calc(1vw + 0.4em);
-  margin: 0;
-  background: #fff;
-  border: 1px solid $nuc_light;
-  color: $nuc_grey;
+  ul{
+    display: inline-flex;
+    li {
+      display: flex;
+      a{
+        padding: 0.7em calc(1vw + 0.4em);
+        margin: 0;
+        background: #fff;
+        border: 1px solid $nuc_light;
+        color: $nuc_grey;
+      }
+    }
+  }
+  .currentPage span{
+    padding: 0.7em calc(1vw + 0.4em);
+    margin: 0;
+    background: $nuc_orange;
+    border: 1px solid $nuc_light;
+    color:#fff;
+  }
 }

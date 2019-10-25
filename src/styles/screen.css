@@ -14,26 +14,22 @@ main {
 .pagination {
   margin: 1em auto;
   text-align: center; }
-
-.pagination ul {
-  display: inline-flex; }
-
-.pagination li {
-  display: flex; }
-
-.pagination .currentPage span {
-  padding: 0.7em calc(1vw + 0.4em);
-  margin: 0;
-  background: #f78f21;
-  border: 1px solid #F5F3F2;
-  color: #fff; }
-
-.pagination li a {
-  padding: 0.7em calc(1vw + 0.4em);
-  margin: 0;
-  background: #fff;
-  border: 1px solid #F5F3F2;
-  color: #836e5d; }
+  .pagination ul {
+    display: inline-flex; }
+    .pagination ul li {
+      display: flex; }
+      .pagination ul li a {
+        padding: 0.7em calc(1vw + 0.4em);
+        margin: 0;
+        background: #fff;
+        border: 1px solid #F5F3F2;
+        color: #836e5d; }
+  .pagination .currentPage span {
+    padding: 0.7em calc(1vw + 0.4em);
+    margin: 0;
+    background: #f78f21;
+    border: 1px solid #F5F3F2;
+    color: #fff; }
 
 header {
   background: #fff; }
