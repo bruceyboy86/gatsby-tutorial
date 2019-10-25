@@ -7,7 +7,7 @@ const WebPage = ({data}) => {
   const page = data.nodeDragAndDropPage;
   let addImageStrings = page.body.processed.replace(new RegExp("-base-url-/-files-directory-/", 'g'), 'https://illuminate.nucleusfinancial.com/sites/default/files/');
   return (
-    <Layout>
+    <Layout pageType="webPageTemplate">
       <h1>{page.title}</h1>
       <div dangerouslySetInnerHTML={{ __html: addImageStrings }} />
     </Layout>

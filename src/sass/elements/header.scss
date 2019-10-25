@@ -7,7 +7,6 @@ header{
     display: grid;
     grid-template-areas: "logo pageNav";
     grid-template-columns: 1fr 1fr;
-    grid-column-gap: 2%;
     align-items: center;
     #logo{
       grid-area: logo;

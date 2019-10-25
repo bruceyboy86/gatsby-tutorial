@@ -5,7 +5,6 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import PostPreview from "../components/postPreview"
 import Pager from "../components/pager";
-import "../styles/grid.css"
 
 const Explore = ({data, pageContext}) => {
   const posts = data.allNodeIlluminatePost.nodes;

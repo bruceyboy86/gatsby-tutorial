@@ -6,44 +6,15 @@
 
 //elements
 @import
-    "elements/layout",
     "elements/pagination",
     "elements/header",
     "elements/footer";
-//     "elements/footer",
-//     "elements/searchbar",
-//     "elements/nav",
-//     "elements/search-filter",
-//     "elements/cookieconsent",
-//     "elements/hubspot-forms",
-//     "elements/topline",
-//     "elements/post_basics",
-//     "elements/buttons",
-//     "elements/post_comments",
-//     "elements/article",
-//     "elements/article_hr",
-//     "elements/comments",
-//     "elements/social_icons",
-//     "elements/illuminate-ad",
-//     "elements/newsletter-box",
-//     "elements/social_footer",
-//     "elements/main",
-//     "elements/authors",
-//     "elements/regions",
-//     "elements/hp-grid",
-//     "elements/search-pages",
-//     "new_elements/collections",
-//     "new_elements/card_layouts",
-//     "new_elements/layout_templates",
-//     "new_elements/post_video",
-//     "new_elements/layout",
-//     "new_elements/humanCapital",
-//     "new_elements/glazed_img_browser",
-//     "elements/tables";
 
+//pages
+@import
+    "pages/explore",
+    "pages/post";
 
 //global
 @import
     "global/base";
-    // "global/modals",
-    // "font-awesome/font-awesome";

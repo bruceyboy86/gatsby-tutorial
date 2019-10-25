@@ -9,7 +9,7 @@ const Post = ({data}) => {
   const post = data.nodeIlluminatePost;
 
   return (
-    <Layout>
+    <Layout pageType="postTemplate">
 
       <h1>{post.title}</h1>
       <Img
