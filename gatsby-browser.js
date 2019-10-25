@@ -7,4 +7,7 @@
 // You can delete this file if you're not using it
 
 // import "./src/styles/global.css"
+import 'bootstrap/dist/css/bootstrap.css';
+import "jquery";
+import 'bootstrap/dist/js/bootstrap.js';
 import "./src/styles/screen.css"
