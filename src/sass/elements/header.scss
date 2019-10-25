@@ -16,12 +16,8 @@ header{
       grid-area: hamburgerLabel;
     }
     #pageNav {
-      // width: 100%;
       background: #fff;
-      // display: grid;
-      // grid-template-columns: 1fr;
       justify-items: end;
-      // align-items: end;
       font-size: 90%;
       display: flex;
       flex-direction: row-reverse;
@@ -54,7 +50,6 @@ header{
           margin: 0 auto;
           li {
             display: block;
-            // border-bottom: 1px solid #F5F3F2;
             width: 100%;
             text-align: center;
           }
