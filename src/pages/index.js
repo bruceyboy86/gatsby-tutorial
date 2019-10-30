@@ -1,19 +1,33 @@
 import React from "react"
+import { graphql } from "gatsby";
 
 import Layout from "../components/layout"
-import Image from "../components/image"
 import SEO from "../components/seo"
 
-const IndexPage = () => (
-  <Layout>
-    <SEO title="Home" />
-    <h1>Hi Bruce</h1>
-    <p>Welcome to your Gatsby site.</p>
-    <p>It's starting to kick ass!</p>
-    <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-      <Image />
-    </div>
-  </Layout>
-)
+const IndexPage = ({data}) => {
+  const collections = data.allNodeCollectionListPage.nodes[0].relationships.field_collections;
+  return(
+    <Layout>
+      <SEO title="Illuminate.nucleusfinancial.com" />
+      {collections.map(collection => (
+        <p>{collection.title}</p>
+      ))}
+    </Layout>
+  )
+}
+
+export const query = graphql`
+  query {
+    allNodeCollectionListPage(limit: 1, filter: {status: {eq: true}, relationships: {field_collections: {elemMatch: {field_hr_toggle: {eq: false}}}}}) {
+      nodes {
+        relationships {
+          field_collections {
+            title
+          }
+        }
+      }
+    }
+  }
+`
 
 export default IndexPage
