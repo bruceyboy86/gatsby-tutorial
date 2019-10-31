@@ -1,9 +1,8 @@
 import { Link } from "gatsby"
-import PropTypes from "prop-types"
 import React from "react"
 import Logo from "./logo"
 
-const Header = ({ siteTitle }) => (
+const Header = () => (
   <header>
     <div className="headerWrapper">
       <Link id="logo" to="/">
@@ -43,13 +42,5 @@ const Header = ({ siteTitle }) => (
     </div>
   </header>
 )
-
-Header.propTypes = {
-  siteTitle: PropTypes.string,
-}
-
-Header.defaultProps = {
-  siteTitle: ``,
-}
 
 export default Header
