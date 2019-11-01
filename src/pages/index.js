@@ -6,11 +6,15 @@ import SEO from "../components/seo"
 import Collection from "../components/collection";
 
 const IndexPage = ({data}) => {
+  const latestPosts = data.allNodeIlluminatePost.nodes;
   const collections = data.allNodeCollectionListPage.nodes[0].relationships.field_collections;
   return(
     <Layout pageType="collectionListPageContainer">
       <SEO title="Illuminate.nucleusfinancial.com" />
-      {collections.map(collection => (
+      {collections.slice(0, 1).map(collections => (
+        <Collection collectionObject={collections} latestPosts={latestPosts} />
+      ))}
+      {collections.slice(1).map(collection => (
         <Collection collectionObject={collection} />
       ))}
     </Layout>
@@ -19,6 +23,41 @@ const IndexPage = ({data}) => {
 
 export const query = graphql`
   query {
+    allNodeIlluminatePost(limit: 5, sort: {fields: created, order: DESC}) {
+      nodes {
+        title
+        field_readtime
+        path {
+          alias
+        }
+        created
+        relationships {
+          field_featured_image {
+            localFile {
+              id
+              childImageSharp{
+                fluid(maxWidth: 600) {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
+          }
+          field_author_tax {
+            name
+          }
+          field_category {
+            name
+          }
+        }
+      id
+      body {
+        summary
+      }
+      field_featured_image {
+          alt
+        }
+      }
+    }
     allNodeCollectionListPage(limit: 1, filter: {status: {eq: true}, relationships: {field_collections: {elemMatch: {field_hr_toggle: {eq: false}}}}}) {
       nodes {
         relationships {
