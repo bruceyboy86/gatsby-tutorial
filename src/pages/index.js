@@ -8,7 +8,7 @@ import Collection from "../components/collection";
 const IndexPage = ({data}) => {
   const collections = data.allNodeCollectionListPage.nodes[0].relationships.field_collections;
   return(
-    <Layout pageType="exploreContainer">
+    <Layout pageType="collectionListPageContainer">
       <SEO title="Illuminate.nucleusfinancial.com" />
       {collections.map(collection => (
         <Collection collectionObject={collection} />

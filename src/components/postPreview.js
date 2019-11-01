@@ -11,7 +11,7 @@ const PostPreview = ({title, path, image, alt, summary}) => (
       <Link to={path}>
         {title}
       </Link>
-      <div dangerouslySetInnerHTML={{__html: summary}} />
+      <summary dangerouslySetInnerHTML={{__html: summary}} />
     </div>
   </div>
 );
