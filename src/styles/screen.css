@@ -112,7 +112,7 @@
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-template-areas: "mainPost mainPost mainPost mainPost" "secondPost thirdPost fourthPost fifthPost";
-  grid-template-rows: 1fr 1fr;
+  grid-template-rows: 1fr;
   grid-column-gap: 2%;
   grid-row-gap: 1.3em; }
   .lyt_latest .illuminatePost {
