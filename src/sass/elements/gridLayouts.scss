@@ -3,20 +3,8 @@
   grid-template-columns: repeat(auto-fill, minmax(12em, 1fr));
   grid-column-gap: 2%;
   grid-row-gap: 1.3em;
-  justify-items: stretch;
-  align-items: stretch;
   .illuminatePost {
     background: #fff;
-    .metaContainer {
-      padding: 0.8em;
-      display: grid;
-      grid-template-columns: 1fr;
-      grid-template-rows: 1fr 2fr;
-      grid-column-gap: 0;
-      grid-row-gap: 0;
-      justify-items: stretch;
-      align-items: stretch;
-    }
   }
 }
 .lyt_list_adspace, .lyt_3_col_list{
@@ -45,7 +33,7 @@
     background: #fff;
   }
 }
-.lyt_card_feature_first, .lyt_strip_3row_2col, .lyt_feature_card_strip, .lyt_2_cards_4_strips{
+.lyt_card_feature_first, .lyt_strip_3row_2col, .lyt_feature_card_strip, .lyt_2_cards_4_strips, .lyt_latest, .lyt_card_4col{
   .metaContainer {
     padding: 1em;
   }
@@ -125,6 +113,38 @@
     }
   }
 }
+.lyt_latest{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-areas: "mainPost mainPost mainPost mainPost" "secondPost thirdPost fourthPost fifthPost";
+  grid-template-rows: 1fr 1fr;
+  grid-column-gap: 2%;
+  grid-row-gap: 1.3em;
+  .illuminatePost {
+    background: #fff;
+    &:nth-child(1) {
+      grid-area: mainPost;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr;
+      summary{
+        display: block;
+      }
+    }
+    &:nth-child(2) {
+      grid-area: secondPost;
+    }
+    &:nth-child(3) {
+      grid-area: thirdPost;
+    }
+    &:nth-child(4) {
+      grid-area: fourthPost;
+    }
+    &:nth-child(5) {
+      grid-area: fifthPost;
+    }
+  }
+}
 
 // temp removal of elelments
 .lyt_list_adspace, .lyt_3_col_list, .lyt_feature_card_strip{
@@ -137,7 +157,7 @@
     display: none;
   }
 }
-.lyt_card_feature_first, .lyt_card_4col, .lyt_strip_3row_2col{
+.lyt_card_feature_first, .lyt_card_4col, .lyt_strip_3row_2col, .lyt_latest{
   summary{
     display: none;
   }

@@ -21,20 +21,9 @@
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(12em, 1fr));
   grid-column-gap: 2%;
-  grid-row-gap: 1.3em;
-  justify-items: stretch;
-  align-items: stretch; }
+  grid-row-gap: 1.3em; }
   .lyt_card_4col .illuminatePost {
     background: #fff; }
-    .lyt_card_4col .illuminatePost .metaContainer {
-      padding: 0.8em;
-      display: grid;
-      grid-template-columns: 1fr;
-      grid-template-rows: 1fr 2fr;
-      grid-column-gap: 0;
-      grid-row-gap: 0;
-      justify-items: stretch;
-      align-items: stretch; }
 
 .lyt_list_adspace, .lyt_3_col_list {
   display: grid;
@@ -60,7 +49,7 @@
   .lyt_card_feature_first .illuminatePost {
     background: #fff; }
 
-.lyt_card_feature_first .metaContainer, .lyt_strip_3row_2col .metaContainer, .lyt_feature_card_strip .metaContainer, .lyt_2_cards_4_strips .metaContainer {
+.lyt_card_feature_first .metaContainer, .lyt_strip_3row_2col .metaContainer, .lyt_feature_card_strip .metaContainer, .lyt_2_cards_4_strips .metaContainer, .lyt_latest .metaContainer, .lyt_card_4col .metaContainer {
   padding: 1em; }
 
 .lyt_strip_3row_2col, .lyt_feature_card_strip, .lyt_2_cards_4_strips {
@@ -119,13 +108,38 @@
     .lyt_feature_card_strip .illuminatePost:first-of-type summary {
       display: block; }
 
+.lyt_latest {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-areas: "mainPost mainPost mainPost mainPost" "secondPost thirdPost fourthPost fifthPost";
+  grid-template-rows: 1fr 1fr;
+  grid-column-gap: 2%;
+  grid-row-gap: 1.3em; }
+  .lyt_latest .illuminatePost {
+    background: #fff; }
+    .lyt_latest .illuminatePost:nth-child(1) {
+      grid-area: mainPost;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr; }
+      .lyt_latest .illuminatePost:nth-child(1) summary {
+        display: block; }
+    .lyt_latest .illuminatePost:nth-child(2) {
+      grid-area: secondPost; }
+    .lyt_latest .illuminatePost:nth-child(3) {
+      grid-area: thirdPost; }
+    .lyt_latest .illuminatePost:nth-child(4) {
+      grid-area: fourthPost; }
+    .lyt_latest .illuminatePost:nth-child(5) {
+      grid-area: fifthPost; }
+
 .lyt_list_adspace .readTime, .lyt_list_adspace .category, .lyt_list_adspace .date, .lyt_list_adspace .author, .lyt_list_adspace summary, .lyt_3_col_list .readTime, .lyt_3_col_list .category, .lyt_3_col_list .date, .lyt_3_col_list .author, .lyt_3_col_list summary, .lyt_feature_card_strip .readTime, .lyt_feature_card_strip .category, .lyt_feature_card_strip .date, .lyt_feature_card_strip .author, .lyt_feature_card_strip summary {
   display: none; }
 
 .lyt_strip_3row_2col .date, .lyt_strip_3row_2col .readTime, .lyt_strip_3row_2col .category {
   display: none; }
 
-.lyt_card_feature_first summary, .lyt_card_4col summary, .lyt_strip_3row_2col summary {
+.lyt_card_feature_first summary, .lyt_card_4col summary, .lyt_strip_3row_2col summary, .lyt_latest summary {
   display: none; }
 
 .lyt_feature_card_strip .illuminatePost:first-of-type .readTime, .lyt_feature_card_strip .illuminatePost:first-of-type .category, .lyt_feature_card_strip .illuminatePost:first-of-type .date, .lyt_feature_card_strip .illuminatePost:first-of-type .author {
