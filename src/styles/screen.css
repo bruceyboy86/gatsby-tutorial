@@ -58,6 +58,9 @@
   .lyt_card_feature_first .illuminatePost {
     background: #fff; }
 
+.lyt_card_feature_first .metaContainer, .lyt_strip_3row_2col .metaContainer, .lyt_feature_card_strip .metaContainer, .lyt_2_cards_4_strips .metaContainer {
+  padding: 1em; }
+
 .lyt_strip_3row_2col, .lyt_feature_card_strip, .lyt_2_cards_4_strips {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -91,7 +94,7 @@
     grid-area: sixthPost; }
 
 .lyt_feature_card_strip {
-  grid-template-areas: "firstPost secondPost" "mainPost thirdPost" "mainPost fourthPost" "mainPost fifthPost" "mainPost sixthPost";
+  grid-template-areas: "mainPost secondPost" "mainPost thirdPost" "mainPost fourthPost" "mainPost fifthPost" "mainPost sixthPost";
   grid-template-rows: 1fr 1fr 1fr 1fr 1fr; }
   .lyt_feature_card_strip .illuminatePost:nth-child(1) {
     grid-area: mainPost; }
@@ -110,6 +113,15 @@
     grid-template-rows: 1fr 1fr; }
     .lyt_feature_card_strip .illuminatePost:first-of-type summary {
       display: block; }
+
+.lyt_list_adspace .readTime, .lyt_list_adspace .category, .lyt_list_adspace .date, .lyt_list_adspace .author, .lyt_list_adspace summary, .lyt_3_col_list .readTime, .lyt_3_col_list .category, .lyt_3_col_list .date, .lyt_3_col_list .author, .lyt_3_col_list summary {
+  display: none; }
+
+.lyt_strip_3row_2col .date, .lyt_strip_3row_2col .readTime, .lyt_strip_3row_2col .category {
+  display: none; }
+
+.lyt_card_feature_first summary, .lyt_card_4col summary {
+  display: none; }
 
 .pagination {
   margin: 1em auto;

@@ -45,6 +45,11 @@
     background: #fff;
   }
 }
+.lyt_card_feature_first, .lyt_strip_3row_2col, .lyt_feature_card_strip, .lyt_2_cards_4_strips{
+  .metaContainer {
+    padding: 1em;
+  }
+}
 .lyt_strip_3row_2col, .lyt_feature_card_strip, .lyt_2_cards_4_strips{
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -88,7 +93,7 @@
   }
 }
 .lyt_feature_card_strip{
-  grid-template-areas: "firstPost secondPost" "mainPost thirdPost" "mainPost fourthPost" "mainPost fifthPost" "mainPost sixthPost";
+  grid-template-areas: "mainPost secondPost" "mainPost thirdPost" "mainPost fourthPost" "mainPost fifthPost" "mainPost sixthPost";
   grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
   .illuminatePost {
     &:nth-child(1) {
@@ -116,5 +121,22 @@
         display: block;
       }
     }
+  }
+}
+
+// temp removal of elelments
+.lyt_list_adspace, .lyt_3_col_list{
+  .readTime, .category, .date, .author, summary {
+    display: none;
+  }
+}
+.lyt_strip_3row_2col{
+  .date, .readTime, .category {
+    display: none;
+  }
+}
+.lyt_card_feature_first, .lyt_card_4col{
+  summary{
+    display: none;
   }
 }
