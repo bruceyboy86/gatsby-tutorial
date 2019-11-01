@@ -66,6 +66,12 @@ export const query = graphql`
                 title
                 field_css_class
               }
+              field_background_colour {
+                field_hex
+              }
+              field_text_colour {
+                field_hex
+              }
             }
           }
         }
