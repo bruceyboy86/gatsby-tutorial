@@ -7,15 +7,17 @@ import Layout from '../components/layout';
 
 const Post = ({data}) => {
   const post = data.nodeIlluminatePost;
-
   return (
     <Layout pageType="postTemplate">
 
       <h1>{post.title}</h1>
-      <Img
-        fluid={post.relationships.field_featured_image.localFile.childImageSharp.fluid}
-        alt={post.field_featured_image.alt}
-      />
+      {post.field_featured_image ?
+        <Img
+          fluid={post.relationships.field_featured_image.localFile.childImageSharp.fluid}
+          alt={post.field_featured_image.alt}
+        />
+        : null
+      }
       <div dangerouslySetInnerHTML={{ __html: post.body.processed}} />
     </Layout>
   )
