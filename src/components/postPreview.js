@@ -21,7 +21,7 @@ const getDate = (created) => {
   )
 }
 
-const PostPreview = ({title, path, image, alt, summary, author, category, created, readtime}) => (
+const PostPreview = ({title, path, image, alt, summary, author, category, created, readtime, summaryOff}) => (
   <div className="illuminatePost">
     <div className="featuredImageContainer">
       <a href={path} alt={alt}>
@@ -36,7 +36,7 @@ const PostPreview = ({title, path, image, alt, summary, author, category, create
           {title}
         </Link>
       </div>
-      <summary dangerouslySetInnerHTML={{__html: summary}} />
+      {summaryOff ? null : <summary dangerouslySetInnerHTML={{__html: summary}} />}
       <div className="date">{getDate(created)}</div>
       <div className="author">{author}</div>
     </div>

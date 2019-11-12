@@ -20,11 +20,16 @@ const Explore = ({data, pageContext}) => {
         {posts.map(post => (
           <PostPreview
             key={post.id}
+            readtime={post.field_readtime}
             title={post.title}
             path={post.path ? post.path.alias : "#"}
             image={post.relationships.field_featured_image.localFile.childImageSharp.fluid}
             alt={post.field_image ? post.field_image.alt : "default"}
             summary={ post.body.summary }
+            author={post.relationships.field_author_tax.name}
+            created={post.created}
+            category={post.relationships.field_category.name}
+            summaryOff={true}
           />
         ))}
       </div>
@@ -37,7 +42,7 @@ export const query = graphql`
 query($skip: Int!, $limit: Int!){
     allNodeIlluminatePost(
     sort: {fields: created, order: DESC}
-    filter: {field_hr_toggle: {nin: true}, relationships: {field_featured_image: {localFile: {size: {gte: 1}}}}, body: {summary: {ne: "", nin: "null"}}}
+    filter: {field_hr_toggle: {nin: true}, relationships: {field_featured_image: {localFile: {size: {gte: 1}}}}}
     skip: $skip
     limit: $limit
   ) {
@@ -51,7 +56,10 @@ query($skip: Int!, $limit: Int!){
       id
       body {
         summary
-        processed
+      }
+      field_readtime
+      path {
+        alias
       }
       created
       field_featured_image {
@@ -68,9 +76,12 @@ query($skip: Int!, $limit: Int!){
             }
           }
         }
-      }
-      path {
-        alias
+        field_author_tax {
+          name
+        }
+        field_category {
+          name
+        }
       }
     }
   totalCount
