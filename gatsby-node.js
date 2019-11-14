@@ -15,20 +15,6 @@ exports.createPages = async ({actions, graphql}) => {
       allNodeArticle {
       nodes {
         id
-        title
-        body {
-          processed
-        }
-        field_image {
-          alt
-        }
-        relationships {
-          field_image {
-            localFile {
-              publicURL
-            }
-          }
-        }
         path {
           alias
         }

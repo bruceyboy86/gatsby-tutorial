@@ -31,6 +31,7 @@ module.exports = {
       resolve: `gatsby-source-drupal`,
       options: {
         baseUrl: `http://umami.lndo.site/`,
+        preview: true
       },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality
