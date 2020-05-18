@@ -12,8 +12,8 @@ const Article = ({data}) => {
 
       <h1>{post.title}</h1>
       <img
-        src={post.relationships.field_image.localFile.publicURL}
-        alt={post.field_image.alt}
+        src={post.relationships.field_image && post.relationships.field_image.localFile && post.relationships.field_image.localFile.publicURL ? post.relationships.field_image.localFile.publicURL : null}
+        alt={post.field_image && post.field_image.alt ? post.field_image.alt : null}
       />
       <div dangerouslySetInnerHTML={{ __html: post.body.processed}} />
     </Layout>
